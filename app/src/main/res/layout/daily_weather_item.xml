@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dailyUIModel"
+            type="com.p109.nab_android_challenge.domain.search.businessmodel.DailyWeatherDomainModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@{@string/date_label(dailyUIModel.date)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            tools:text="Date: Tue, 10 Mar 2022"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/default_text_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:text="@{@string/average_temp_label(dailyUIModel.averageTemp)}"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/avarage_temp"
+            app:layout_constraintTop_toBottomOf="@+id/date"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/default_text_size"
+            tools:text="Avarage temperature: 20&#x2103;" />
+
+        <TextView
+            android:text="@{@string/pressure_label(dailyUIModel.pressure)}"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/pressure"
+            app:layout_constraintTop_toBottomOf="@+id/avarage_temp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/default_text_size"
+            tools:text="Pressure: 1031"/>
+
+        <TextView
+            android:text="@{@string/humidity_label(dailyUIModel.humidity)}"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/humidity"
+            app:layout_constraintTop_toBottomOf="@+id/pressure"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/default_text_size"
+            tools:text="Humidity: 71%"/>
+
+        <TextView
+            android:text="@{@string/description_label(dailyUIModel.description)}"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/description"
+            app:layout_constraintTop_toBottomOf="@+id/humidity"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/default_text_size"
+            tools:text="Description: light rain"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="search_hint">Enter the city</string>
+    <string name="date_label">Date: %1$s</string>
+    <string name="average_temp_label">"Average temperature: %1$d&#x2103;"</string>
+    <string name="pressure_label">"Pressure: %1$d"</string>
+    <string name="humidity_label">Humidity: %1$d%%</string>
+    <string name="description_label">Description: %1$s</string>
+    <string name="get_weather">Get Weather</string>
+    <string name="edt_input_city_desc">Enter the city</string>
+    <string name="empty_search_result">No results for <b>%1$s</b></string>
+    <string name="text_input_error_empty">The city is empty!</string>
+    <string name="text_input_error_too_short">The city is less than 3 characters!</string>
+    <string name="daily_weather_list">Weather forecast for next 7 days.</string>
+    <string name="text_error_authorization">User Unauthorized Error!</string>
+    <string name="text_error_not_found">The city not found!</string>
+    <string name="unknown_error">Something went wrong!</string>
+</resources>
